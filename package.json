@@ -1,0 +1,27 @@
+{
+  "name": "jubilant-guide",
+  "version": "1.0.0",
+  "description": "A small library app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASRicketts/jubilant-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ASRicketts/jubilant-guide/issues"
+  },
+  "homepage": "https://github.com/ASRicketts/jubilant-guide#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
+    "prettier": "^3.8.3"
+  }
+}
