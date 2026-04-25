@@ -14,7 +14,6 @@ function Book(title, author, pages, read) {
 Book.prototype.toggleRead = function () {
   this.read = !this.read;
 };
-
 //Collects form values, creates a new Book, and adds it to the myLibrary array
 function addBookToLibrary() {
   const title = document.getElementById("title").value;
