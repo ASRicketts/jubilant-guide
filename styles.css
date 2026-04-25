@@ -1,0 +1,214 @@
+/* Rest browser margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the background color and font for the body */
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #f5efe6;
+  color: dodgerblue;
+  line-height: 1.6;
+  padding: 2 rem;
+  min-height: 100vh;
+}
+
+/* Style the header */
+header {
+  font_size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.05rem;
+}
+
+/*"New Book" button styles */
+#openDialog {
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#openDialog:hover {
+  background-color: #1c75d4;
+}
+
+/*Container for the book cards */
+#bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+}
+
+/* Styles for each book card */
+#bookGrid > div {
+  background-color: white;
+  border: 1px solid #d4c5b0;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: translateY(-2px);
+}
+
+/* Lift the card slightly on hover for interactivity */
+#bookGrid > div:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px); /* nudges card up 2px */
+}
+
+/* Book title */
+#bookGrid h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: dodgerblue;
+}
+
+/* Book details (author, pages, read status) */
+#bookGrid p {
+  margin-bottom: 0.4rem;
+  color: #5a4632;
+}
+
+/* Last paragraph (read status) - extra space before buttons */
+#bookGrid p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+/* Dialog modal - centered overlay for adding books */
+#bookDialog {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  min-width: 350px;
+  background-color: #fffaf3; /* slightly warmer than page bg */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}
+
+/* Dim the page behind the dialog when open */
+#bookDialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Dialog heading */
+#bookDialog h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Form labels */
+#bookDialog label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #5a4632;
+}
+
+/* Text and number inputs */
+#bookDialog input[type="text"],
+#bookDialog input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d4c5b0;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: white;
+}
+
+/* Highlight inputs when focused */
+#bookDialog input[type="text"]:focus,
+#bookDialog input[type="number"]:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+
+/* Checkbox sits inline with its label */
+#bookDialog input[type="checkbox"] {
+  margin-right: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Dialog buttons (Cancel and Add) */
+#bookDialog button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+/* Submit (Add) button - primary action */
+#submitBook {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#submitBook:hover {
+  background-color: #1c75d4;
+}
+
+/* Cancel button - secondary, less prominent */
+#cancelDialog {
+  background-color: transparent;
+  color: #5a4632;
+  border: 1px solid #d4c5b0 !important;
+}
+
+#cancelDialog:hover {
+  background-color: #ede4d3;
+}
+
+/* Toggle Read button - secondary style */
+.toggle-read {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  background-color: transparent;
+  color: dodgerblue;
+  border: 1px solid dodgerblue;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.toggle-read:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Remove button - warmer red */
+.remove-book {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  background-color: transparent;
+  color: #a0522d; /* sienna */
+  border: 1px solid #a0522d;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-book:hover {
+  background-color: #a0522d;
+  color: white;
+}
